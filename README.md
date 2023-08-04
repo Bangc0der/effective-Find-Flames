@@ -1,5 +1,8 @@
-FInd Flames, has a very beutiful UI design, which I can't fail to appreciate. As per the Assignment, I uploaded code for the required part of that App - being the Edit Profile section of the App in a zip folder It was extremely amusing to make this portion of the App on Flutter, and I would be absolutely thrilled to work on the app with the team.
+FInd Flames, has a very beutiful UI design, which I can't fail to appreciate. As per the Assignment, I uploaded code for the required part of that App - being the Edit Profile section of the App on github as well as on a drive link(https://drive.google.com/file/d/1eJraQbS7cmx2Rre98KzAu2_swmhn7Ja5/view?usp=sharing). 
 
+It was extremely amusing to make this portion of the App on Flutter, and I would be absolutely thrilled to work on the app with the team.
+
+Google Drive link for the Zipped Folder:https://drive.google.com/file/d/1eJraQbS7cmx2Rre98KzAu2_swmhn7Ja5/view?usp=sharing
 Please find the Images of the output below: 
 
 
