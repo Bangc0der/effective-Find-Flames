@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './home.dart';
+import './mhome.dart';
 
 
-
+//pass data via constructors to pass data from page to page
 void main() {
   runApp(
     MaterialApp(title:"Find Flames",
@@ -10,3 +10,6 @@ void main() {
   )
   );
 }
+
+
+//Push and Push Replacement
