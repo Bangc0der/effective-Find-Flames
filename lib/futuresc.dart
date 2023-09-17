@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial/gift.dart';
 import 'package:tutorial/profile.dart';
 
 
@@ -9,26 +10,7 @@ class FutureScreen extends StatefulWidget{
 
 class _FutureScreenState extends State<FutureScreen> {
 
-  Future<void> getData()async{
-
-    //to prevent any sort of error...
-    try{
-      final userID = await Future.delayed(Duration(seconds: 2),(){
-      print("hey hi");
-      return 1;
-    });
-    
-    }catch(e){
-      print("Error");
-    }
-
-    
-    await    Future.delayed(Duration(seconds: 3 ),(){
-        print("Processing...");
-    });
-  
-        print("Hey I shouldn't be first");
-  }
+ 
     
 
   @override
@@ -39,7 +21,7 @@ class _FutureScreenState extends State<FutureScreen> {
           Navigator.push(context, MaterialPageRoute(builder: (context)=> ProfileScreen() ));
         } ,
         icon:const Icon(Icons.circle_rounded,size:40,color:Color.fromARGB(254, 128, 126, 126),)),
-        title:const Text('Futures',style:TextStyle(
+        title:const Text('Gifts',style:TextStyle(
           color: Color.fromARGB(255,250,94,151),
           fontSize:28,)),
         centerTitle: true,
@@ -62,32 +44,33 @@ class _FutureScreenState extends State<FutureScreen> {
             height:40, //height of button
             width:150, //width of button
             child:ElevatedButton(
-              child: const Text('Your Future',style:TextStyle(color: Color.fromARGB(255,250,94,151),fontSize:20)),
+              child: const Text('Exit',style:TextStyle(color: Color.fromARGB(255,250,94,151),fontSize:20)),
                       style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       minimumSize: const Size.fromHeight(40),
                       shape: RoundedRectangleBorder( //to set border radius to button
                       borderRadius: BorderRadius.circular(10)
                   ),),
-                      onPressed: ()async{
-                        await getData();
-                        print("This'd get second priority when implementing await");
-                        }
+                      onPressed:(){Navigator.pop(context);}
                   //parameters of Button class
             ),),
         const SizedBox(height:5,),
         SizedBox( 
             height:40, //height of button
             width:150, //width of button
-            child:ElevatedButton(
-              child: const Text('Bye',style:TextStyle(fontSize:20)),
+            child:ElevatedButton.icon(
+              icon: const Icon( // <-- Icon
+                Icons.shopping_cart,
+                size: 24.0,
+              ),
+              label: const Text('Buy Gifts',style:TextStyle(fontSize:20)),
               style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(255,250,94,151),
               minimumSize: const Size.fromHeight(50),
               shape: RoundedRectangleBorder( //to set border radius to button
                       borderRadius: BorderRadius.circular(10)
                   ),),
-              onPressed: (){/*Enable location*/}
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> giftScreen() ));}
        )),
        
         ]
@@ -100,6 +83,28 @@ class _FutureScreenState extends State<FutureScreen> {
 
 /*
 Futures:
+Future<void> getData()async{
+
+    //to prevent any sort of error...
+    try{
+      final userID = await Future.delayed(Duration(seconds: 2),(){
+      print("hey hi");
+      return 1;
+    });
+    
+    }catch(e){
+      print("Error");
+    }
+
+    
+    await    Future.delayed(Duration(seconds: 3 ),(){
+        print("Processing...");
+    });
+  
+        print("Hey I shouldn't be first");
+  }
+
+
 Future<void> getData()async{
     Future.delayed(Duration(seconds: 2),(){
       print("I hope this prints second");
